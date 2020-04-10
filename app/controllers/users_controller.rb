@@ -17,15 +17,15 @@ class UsersController < ApplicationController
 
   def create
     p params
-    p params[:first_name]
-    user = User.create(first_name: params[:first_name], last_name: params[:last_name], voice_type: params[:voice_type], email: params[:email], password_digest: params[:password_digest])
+    user = User.create(first_name: params[:first_name], last_name: params[:last_name], voice_type: params[:voice_type], email: params[:email], password: params[:password])
+    p user
     render json: user
   end
 
   def update
     p params
     user = User.find_by(id: params[:id])
-    user.update(first_name: params[:first_name], last_name: params[:last_name], degree: params[:degree], institution: params[:institution], voice_type: params[:voice_type], biography: params[:biography], website: params[:website], email: params[:email], password_digest: params[:password_digest])
+    user.update(first_name: params[:first_name], last_name: params[:last_name], degree: params[:degree], institution: params[:institution], voice_type: params[:voice_type], biography: params[:biography], website: params[:website], email: params[:email], password_digest: params[:password_digest], headshot: params[:headshot], resume: params[:resume])
     render json: user
   end
 
