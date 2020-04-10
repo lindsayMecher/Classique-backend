@@ -7,7 +7,7 @@ class AuthController < ApplicationController
       my_secret = "7d3b6a554654709543da3010ee931cd9c13baf6eae30186b1dcc4bcde95dc0211a75429c76cb14ba85c4e6d2ad7d6de28645830857fcd493b079b60d2397cbdb"
       token = JWT.encode(payload, my_secret, 'HS256')
       render json: { user: user, favorites: user.favorites, favorited_posts: user.favorited_posts, token: token }
-
+      # render json: { user, include: [:favorite, :favorited_post], except: [:updated_at]} , token: token
     else
       render json: { error: "invalid credentials"}, status: 401
     end
