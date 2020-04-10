@@ -3,5 +3,4 @@ class PostSerializer < ActiveModel::Serializer
 
   has_many :favorites
 
-
 end
