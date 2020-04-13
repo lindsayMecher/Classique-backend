@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
 
-  # def new
-  #   user = User.new
-  #   render json: user
-  # end
-
   def index
     users = User.all
     render json: users
@@ -25,34 +20,21 @@ class UsersController < ApplicationController
   def update
     p params
     user = User.find_by(id: params[:id])
-    user.update(first_name: params[:first_name], last_name: params[:last_name], degree: params[:degree], institution: params[:institution], voice_type: params[:voice_type], biography: params[:biography], website: params[:website], email: params[:email], password_digest: params[:password_digest], headshot: params[:headshot], resume: params[:resume])
+    user.update(first_name: params[:first_name], last_name: params[:last_name], degree: params[:degree], institution: params[:institution], voice_type: params[:voice_type], biography: params[:biography], website: params[:website], email: params[:email], password: params[:password])
     render json: user
   end
 
-end
+  def headshot
+    user = User.find_by(id: params[:id])
+    # user.headshot.attach(params[:headshot])
+    #
+    user.headshot.attach(params[:headshot])
+    user.resume.attach(params[:resume])
+    if user&.headshot&.attached?
+      redirect_to rails_blob_url(user.headshot)
+    else
+      head :not_found
+    end
+  end
 
-# def create
-#   date = params[:datetime]
-#   p = DateTime.parse(date).to_date.to_s
-#   appointment = Appointment.create(date: p, time: date, patient_id: params[:patient_id], doctor_id: params[:doctor_id])
-#   render json: appointment
-# end
-#
-# def show
-#   appointment = Appointment.find_by(id: params[:id])
-#   render json: appointment
-# end
-#
-# def update
-#   appointment = Appointment.find_by(id: params[:id])
-#   appointment.update(diagnosis: params[:diagnosis])
-#   appointment.update(directions: params[:directions])
-#
-#   render json: appointment
-# end
-#
-# def destroy
-#   appointment = Appointment.find_by(id: params[:id])
-#   appointment.destroy
-#   render json: appointment
-# end
+end
