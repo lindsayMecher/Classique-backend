@@ -25,4 +25,14 @@ class Post < ApplicationRecord
     string = self.time
     string.strftime("%l:%M %p")
   end
+
+  def stringified_created
+    string = self.created_at
+    string.strftime("%A, %B%e, %Y")
+  end
+
+  def stringified_updated
+    string = self.updated_at
+    string.strftime("%A, %B%e, %Y")
+  end
 end
