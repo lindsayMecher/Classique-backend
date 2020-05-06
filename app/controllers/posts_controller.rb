@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    posts = Post.all
+    posts = Post.all.order("created_at DESC")
     render json: posts
   end
 
@@ -27,6 +27,7 @@ class PostsController < ApplicationController
       contact_first_name: params[:contact_first_name],
       contact_last_name: params[:contact_last_name],
       contact_email: params[:contact_email],
+      user_honorific: params[:user_honorific],
       paid: params[:paid],
       user_id: params[:user_id]
     )
