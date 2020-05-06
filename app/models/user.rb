@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  has_one_attached :headshot
-  has_one_attached :resume
+  # has_one_attached :headshot
 
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
