@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       patch :headshot, :resume, on: :member
     end
 
-  resources :posts, only: [:index, :show, :create, :update, :destroy]
+  resources :posts, only: [:create, :update, :destroy, :show, :index]
   resources :favorites, only: [:index, :show, :create, :destroy]
 
   post '/auth', to: 'auth#create'
