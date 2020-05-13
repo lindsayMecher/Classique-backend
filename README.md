@@ -15,6 +15,8 @@ View the [Front End Repository](https://github.com/lindsayMecher/front-classical
 
 ## Demo
 
+[View Demo on YouTube](https://www.youtube.com/watch?v=qx9IKksDl0w&feature=youtu.be)
+
 ## Contributing:
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
