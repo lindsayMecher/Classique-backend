@@ -12,7 +12,7 @@ class FavoritesController < ApplicationController
   def show
     favorite = Favorite.find_by(id: params[:id])
     render json: favorite
-  end 
+  end
 
   def destroy
     favorite = Favorite.find_by(id: params[:id])

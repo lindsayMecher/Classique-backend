@@ -1,5 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :first_name, :last_name, :email, :voice_type, :biography, :degree, :institution, :website, :resume, :headshot, :video, :honorific, :pronouns
+  attributes :id, :first_name, :last_name, :email, :voice_type, :biography, :degree, :institution, :website, :resume,
+             :headshot, :video, :honorific, :pronouns
 
   has_many :posts
 

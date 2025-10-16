@@ -17,6 +17,12 @@ View the [Front End Repository](https://github.com/lindsayMecher/front-classical
 
 [View Demo on YouTube](https://www.youtube.com/watch?v=qx9IKksDl0w&feature=youtu.be)
 
+## Project Setup:
+1. `Rails db:create`
+2. `Rails db:migrate`
+3. `Rails db:seed`
+4. `Rails s`
+
 ## Contributing:
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
