@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-
   def index
-    posts = Post.all.order("created_at DESC")
+    posts = Post.all.order('created_at DESC')
     render json: posts
   end
 
@@ -11,7 +10,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    p params
     post = Post.create(
       performance_type: params[:performance_type],
       voice_type: params[:voice_type],
@@ -36,18 +34,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    p params
     post = Post.find_by(id: params[:id])
     post.destroy
-    render json: post 
+    render json: post
   end
 
   def update
-    p params[:id].to_i
-    
     post = Post.find_by(id: params[:id].to_i)
-    p post.user_id
-    p post.id
     post.update(
       performance_type: params[:performance_type],
       voice_type: params[:voice_type],
@@ -69,5 +62,4 @@ class PostsController < ApplicationController
     )
     render json: post
   end
-
 end
