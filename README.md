@@ -18,10 +18,11 @@ View the [Front End Repository](https://github.com/lindsayMecher/front-classical
 [View Demo on YouTube](https://www.youtube.com/watch?v=qx9IKksDl0w&feature=youtu.be)
 
 ## Project Setup:
-1. `Rails db:create`
-2. `Rails db:migrate`
-3. `Rails db:seed`
-4. `Rails s`
+1. Create a `.env` file in the root directory and add the following line: `SESSION_SECRET = your-randomly-generated-secret`, swapping out the text for your own randomly generated secret. This will be used in the AuthController
+2. `Rails db:create`
+3. `Rails db:migrate`
+4. `Rails db:seed`
+5. `Rails s`
 
 ## Contributing:
 1. Fork this repository.
