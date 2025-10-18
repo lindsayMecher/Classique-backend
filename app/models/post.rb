@@ -1,4 +1,4 @@
-class Post < ApplicationRecord  
+class Post < ApplicationRecord
   validates :performance_type, presence: true
   validates :voice_type, presence: true
   validates :date, presence: true
@@ -11,29 +11,29 @@ class Post < ApplicationRecord
   validates :contact_first_name, presence: true
   validates :contact_last_name, presence: true
   validates :contact_email, presence: true
-  validates :paid, presence: true
+  validates :paid, inclusion: { in: [true, false] }
 
   belongs_to :user
   has_many :favorites
 
   def stringified_date
-    string = self.date
-    string.strftime("%A, %B %e, %Y")
+    string = date
+    string.strftime('%A, %B %e, %Y')
   end
 
   def stringified_time
-    string = self.time
-    string.strftime("%l:%M %p")
+    string = time
+    string.strftime('%l:%M %p')
   end
 
   def stringified_created
-    string = self.created_at
-    string.strftime("%A, %B %e, %Y")
+    string = created_at
+    string.strftime('%A, %B %e, %Y')
   end
 
   def stringified_updated
-    string = self.updated_at
-    string.strftime("%A, %B %e, %Y")
+    string = updated_at
+    string.strftime('%A, %B %e, %Y')
     # put in time zone of the system.
   end
 end
