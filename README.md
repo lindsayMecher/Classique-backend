@@ -15,7 +15,7 @@ View the [Front End Repository](https://github.com/lindsayMecher/front-classical
 
 ## Demo
 
-[View Demo on YouTube](https://www.youtube.com/watch?v=qx9IKksDl0w&feature=youtu.be)
+[View Demo](https://www.dropbox.com/scl/fi/sxgnq47ufopanrc8gnbd1/Classique-Project-Walk-Through.mp4?rlkey=p5mpwgzv5t0jlfirexpeox0g4&st=8umiun2o&dl=0)
 
 ## Project Setup:
 1. Create a `.env` file in the root directory and add the following line: `SESSION_SECRET = your-randomly-generated-secret`, swapping out the text for your own randomly generated secret. This will be used in the AuthController
