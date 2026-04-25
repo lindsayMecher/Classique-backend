@@ -18,7 +18,7 @@ gem 'puma', '~> 7.0', '>= 7.0.4'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'active_model_serializers'
-gem 'bcrypt', '~> 3.1', '>= 3.1.20'
+gem 'bcrypt', '~> 3.1'
 gem 'jwt'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
