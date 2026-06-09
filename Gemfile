@@ -11,7 +11,7 @@ gem 'propshaft'
 gem 'sqlite3', '>= 2.1'
 # Use Puma as the app server
 gem 'ngrok-tunnel'
-gem 'puma', '~> 7.0', '>= 7.0.4'
+gem 'puma', '~> 7.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
