@@ -192,7 +192,7 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     ngrok-tunnel (2.1.1)
-    nio4r (2.7.4)
+    nio4r (2.7.5)
     nokogiri (1.19.2-aarch64-linux-gnu)
       racc (~> 1.4)
     nokogiri (1.19.2-aarch64-linux-musl)
@@ -226,7 +226,7 @@ GEM
       date
       stringio
     public_suffix (7.0.5)
-    puma (7.0.4)
+    puma (7.2.1)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.8.1)
@@ -413,7 +413,7 @@ DEPENDENCIES
   mutex_m
   ngrok-tunnel
   propshaft
-  puma (~> 7.0, >= 7.0.4)
+  puma (~> 7.2)
   rack-cors
   rails (~> 8.0.3)
   rubocop-rails-omakase
